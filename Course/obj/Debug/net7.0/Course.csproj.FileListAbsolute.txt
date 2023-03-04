@@ -1,0 +1,15 @@
+/workspaces/courseProjectTester/Course/bin/Debug/net7.0/Course
+/workspaces/courseProjectTester/Course/bin/Debug/net7.0/Course.deps.json
+/workspaces/courseProjectTester/Course/bin/Debug/net7.0/Course.runtimeconfig.json
+/workspaces/courseProjectTester/Course/bin/Debug/net7.0/Course.dll
+/workspaces/courseProjectTester/Course/bin/Debug/net7.0/Course.pdb
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.csproj.AssemblyReference.cache
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.AssemblyInfoInputs.cache
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.AssemblyInfo.cs
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.csproj.CoreCompileInputs.cache
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.dll
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/refint/Course.dll
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.pdb
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/Course.genruntimeconfig.cache
+/workspaces/courseProjectTester/Course/obj/Debug/net7.0/ref/Course.dll
