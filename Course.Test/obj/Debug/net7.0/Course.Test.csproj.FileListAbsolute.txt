@@ -1,0 +1,6 @@
+/workspaces/courseProjectTester/Course.Test/bin/Debug/net7.0/CoverletSourceRootsMapping
+/workspaces/courseProjectTester/Course.Test/obj/Debug/net7.0/Course.Test.csproj.AssemblyReference.cache
+/workspaces/courseProjectTester/Course.Test/obj/Debug/net7.0/Course.Test.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/courseProjectTester/Course.Test/obj/Debug/net7.0/Course.Test.AssemblyInfoInputs.cache
+/workspaces/courseProjectTester/Course.Test/obj/Debug/net7.0/Course.Test.AssemblyInfo.cs
+/workspaces/courseProjectTester/Course.Test/obj/Debug/net7.0/Course.Test.csproj.CoreCompileInputs.cache
