@@ -1,5 +1,5 @@
-
-namespace Course.Test;
+using cs330_proj1;
+namespace Course.Test{
 
 public class CourseTest
 {
@@ -20,4 +20,5 @@ public class CourseTest
        
         Assert.Equal(true,true);
     }
+}
 }
