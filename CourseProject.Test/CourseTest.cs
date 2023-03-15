@@ -47,6 +47,8 @@ public class CourseTest
         courseOfferings.Add(tco);
         
         CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
+
+        
     }    
 }
 }
