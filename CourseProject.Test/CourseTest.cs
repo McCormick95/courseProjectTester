@@ -1,5 +1,5 @@
 using cs330_proj1;
-namespace Course.Test{
+namespace CourseProject.Test{
 
 public class CourseTest
 {
@@ -19,7 +19,7 @@ public class CourseTest
         private List<CoreGoal> coreGoals;
         private List<CourseOffering> courseOfferings;
         private CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
-        Assert.Equal(true,true);
+        
     }
 }
 }
