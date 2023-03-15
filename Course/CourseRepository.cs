@@ -99,6 +99,12 @@ namespace cs330_proj1
             Goals.Add(cg3);
         }//end constructor
 
+        public CourseRepository(List<Course> _courses, List<CoreGoal>_coreGoals, List<CourseOffering> _courseOfferings){
+            Courses = _courses;
+            Goals = _coreGoals;
+            Offerings = _courseOfferings;
+        }
+
 
         public List<CourseOffering> getOfferingsByGoalIdAndSemester(String theGoalId, String semester) {
             CoreGoal theGoal=null;
@@ -123,7 +129,7 @@ namespace cs330_proj1
             return courseOfferingsThatMeetGoal;
         }
 
-
+        
 
     }
     

@@ -110,6 +110,5 @@ namespace cs330_proj1
            for a given semester, so that I can work with departments to get some courses offered
            that students can take to meet those goals */
 
-        
      }
 }
