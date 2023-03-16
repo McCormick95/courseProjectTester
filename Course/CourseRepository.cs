@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace cs330_proj1
 {
-    public class CourseRepository {
+    public class CourseRepository : CourseServices.ICourseRepository
+    {
         public List<Course> Courses {get;set;}
         public List<CoreGoal> Goals {get;set;}
         public List<CourseOffering> Offerings {get;set;}
@@ -99,11 +100,23 @@ namespace cs330_proj1
             Goals.Add(cg3);
         }//end constructor
 
-        public CourseRepository(List<Course> _courses, List<CoreGoal>_coreGoals, List<CourseOffering> _courseOfferings){
-            Courses = _courses;
-            Goals = _coreGoals;
-            Offerings = _courseOfferings;
+        public CourseRepository(List<Course> courses, List<CoreGoal> coreGoals, List<CourseOffering> courseOfferings)
+        {
+            Courses= courses;
+            Goals = coreGoals;
+            Offerings = courseOfferings;
         }
+
+        public List<Course> GetCourses(){
+            return Courses;
+        }
+        public List<CoreGoal> GetCoreGoals(){
+            return Goals;
+        }
+        public List<CourseOffering> GetCourseOfferings(){
+            return Offerings;
+        }
+
 
 
         public List<CourseOffering> getOfferingsByGoalIdAndSemester(String theGoalId, String semester) {

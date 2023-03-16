@@ -16,6 +16,8 @@ public class CourseTest
     [Fact]
     public void OfferingsByGoalAndSemester_GoalIDIsNotNull_ReturnsList(){
 
+        // var repo = new Mock<CourseServices.ICourseRepository>();
+        
         List<Course> courses = new List<Course>();
         List<CoreGoal> coreGoals = new List<CoreGoal>();
         List<CourseOffering> courseOfferings = new List<CourseOffering>();
@@ -48,6 +50,7 @@ public class CourseTest
         
         CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
 
+        repo.Setup(m=>m.)
         
     }    
 }

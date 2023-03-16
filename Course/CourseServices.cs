@@ -5,8 +5,8 @@ namespace cs330_proj1
 {
     public class CourseServices
     {
-         // private CourseRepository repo = new CourseRepository();
-         private ICourseRepository _courseRepo;
+         private CourseRepository repo = new CourseRepository();
+         //private ICourseRepository _courseRepo;
 
         //As a student, I want to search for course offerings that meet core goals 
         // so that I can register easily for courses that meet my program requirements
@@ -109,7 +109,9 @@ namespace cs330_proj1
            that students can take to meet those goals */
 
          public interface ICourseRepository{
-            
+            public List<Course> GetCourses();
+            public List<CoreGoal> GetCoreGoals();
+            public List<CourseOffering> GetCourseOfferings();
          }
      }
 }
