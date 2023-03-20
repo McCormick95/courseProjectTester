@@ -8,6 +8,12 @@ namespace cs330_proj1
          private CourseRepository repo = new CourseRepository();
          //private ICourseRepository _courseRepo;
 
+         //when you create a new course services you can then pass in whichever repo you want to use.
+         //looks something like the code below. 
+         // public CourseServices( ICourseRepository){
+         //    _repo=CourseRepository;
+         // }
+
         //As a student, I want to search for course offerings that meet core goals 
         // so that I can register easily for courses that meet my program requirements
          public List<CourseOffering> getOfferingsByGoalIdAndSemester(String theGoalId, String semester) {
