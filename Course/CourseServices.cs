@@ -5,22 +5,23 @@ namespace cs330_proj1
 {
     public class CourseServices
     {
-         private CourseRepository repo = new CourseRepository();
-         //private ICourseRepository _courseRepo;
+        private readonly ICourseRepository _repo;
 
-         //when you create a new course services you can then pass in whichever repo you want to use.
-         //looks something like the code below. 
-         // public CourseServices( ICourseRepository){
-         //    _repo=CourseRepository;
-         // }
+        //private ICourseRepository _courseRepo;
+
+        //when you create a new course services you can then pass in whichever repo you want to use.
+        //looks something like the code below. 
+        public CourseServices( ICourseRepository repo){
+            _repo=repo;
+         }
 
         //As a student, I want to search for course offerings that meet core goals 
         // so that I can register easily for courses that meet my program requirements
          public List<CourseOffering> getOfferingsByGoalIdAndSemester(String theGoalId, String semester) {
           //finish this method during the tutorial 
           //use the repo to get the data from the database (data store)
-            List<CoreGoal> theGoals = repo.Goals;
-            List<CourseOffering> theOfferings = repo.Offerings;
+            List<CoreGoal> theGoals = _repo.GetCoreGoals();
+            List<CourseOffering> theOfferings = _repo.GetCourseOfferings();
                         
             //Complete any other required functionality/business logic to satisfy the requirement
             CoreGoal theGoal =null;
@@ -51,7 +52,7 @@ namespace cs330_proj1
         // User Story 2: As a student, I want to see all available courses so that I know what my options are 
          public List<Course> getCourses() 
          {
-            List<Course> theCourses = repo.Courses;
+            List<Course> theCourses = _repo.GetCourses();
             List<Course> allCourses = new List<Course>();
 
             foreach(Course c in theCourses){
@@ -65,7 +66,7 @@ namespace cs330_proj1
            available to register for next semester */
         public List<CourseOffering> getCourseOfferingsBySemester(String semester) 
          {
-            List<CourseOffering> theOffering = repo.Offerings;
+            List<CourseOffering> theOffering = _repo.GetCourseOfferings();
             List<CourseOffering> courseOfferingsForThatSemester = new List<CourseOffering>();
 
             if(semester==null) throw new Exception("Didn't select a semester");
@@ -83,7 +84,7 @@ namespace cs330_proj1
         choose major courses to register for */
         public List<CourseOffering> getCourseOfferingsBySemesterAndDept(string semester, string department){
 
-         List<CourseOffering> theOffering = repo.Offerings;
+         List<CourseOffering> theOffering = _repo.GetCourseOfferings();
          List<CourseOffering> courseOfferingsBySemesterAndDept = new List<CourseOffering>();
 
          if(semester==null) throw new Exception("Didn't select a semester");

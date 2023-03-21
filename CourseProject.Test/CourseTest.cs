@@ -1,11 +1,14 @@
 using cs330_proj1;
+using Moq;
 namespace CourseProject.Test{
 
 public class CourseTest
 {
     [Fact]
     public void OfferingsByGoalAndSemester_GoalIDIsNull_ThrowsException(){
-        CourseServices service = new CourseServices();
+        var repo = new Mock<CourseServices.ICourseRepository>();
+
+        CourseServices service = new CourseServices(repo);
 
         List<CourseOffering> newList = service.getOfferingsByGoalIdAndSemester(null, null);
 
@@ -16,8 +19,12 @@ public class CourseTest
     [Fact]
     public void OfferingsByGoalAndSemester_GoalIDIsNotNull_ReturnsList(){
 
-        // var repo = new Mock<CourseServices.ICourseRepository>();
-        
+        var repo = new Mock<CourseServices.ICourseRepository>();
+
+
+         CourseServices courseSer = new CourseServices(repo);
+
+
         List<Course> courses = new List<Course>();
         List<CoreGoal> coreGoals = new List<CoreGoal>();
         List<CourseOffering> courseOfferings = new List<CourseOffering>();
@@ -48,9 +55,11 @@ public class CourseTest
         };
         courseOfferings.Add(tco);
         
-        CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
+        //CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
 
-        repo.Setup(m=>m.)
+        repo.Setup(m=>m.getOfferingsByGoalIdAndSemester("TG1", "Spring 2021").Returns(courseOfferings));
+
+        
         
     }    
 }

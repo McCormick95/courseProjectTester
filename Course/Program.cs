@@ -11,7 +11,9 @@ namespace cs330courses
             Console.WriteLine("Hello World!");
             Console.WriteLine("My name is Ryan McCormick");
             
-            CourseServices service = new CourseServices();
+            CourseRepository repo = new CourseRepository();
+
+            CourseServices service = new CourseServices(repo);
             
             Console.WriteLine("---------");
 
