@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lxh77zyVHb0MNgOixrE89dIPJ8JbL2dW2Ag81FC5fXX5xRaB0PVh1dOXmz7tySR38K3tw0reS7g0NBI51mgjRQ==",
+  "dgSpecHash": "/EzI+/nXXy3x2Tw3fHRnlcZFaTRpAHyvgQfCY9GYLxQw09gXNkf4vGfWsJWjb9YVOr4ZWudh09Ux21q11lQeOQ==",
   "success": true,
-  "projectFilePath": "/workspaces/courseProjectTester/Course.Test/Course.Test.csproj",
+  "projectFilePath": "/workspaces/courseProjectTester/CourseProject.Test/CourseProject.Test.csproj",
   "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.codecoverage/17.3.2/microsoft.codecoverage.17.3.2.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
@@ -13,6 +14,7 @@
     "/home/codespace/.nuget/packages/microsoft.testplatform.objectmodel/17.3.2/microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.testplatform.testhost/17.3.2/microsoft.testplatform.testhost.17.3.2.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/moq/4.18.4/moq.4.18.4.nupkg.sha512",
     "/home/codespace/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/nuget.frameworks/5.11.0/nuget.frameworks.5.11.0.nupkg.sha512",
@@ -39,6 +41,7 @@
     "/home/codespace/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.diagnostics.diagnosticsource/4.3.0/system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.diagnostics.tools/4.3.0/system.diagnostics.tools.4.3.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.diagnostics.tracing/4.3.0/system.diagnostics.tracing.4.3.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/system.dynamic.runtime/4.0.11/system.dynamic.runtime.4.0.11.nupkg.sha512",
