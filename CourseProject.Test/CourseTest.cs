@@ -18,18 +18,12 @@ public class CourseTest
 
     [Fact]
     public void OfferingsByGoalAndSemester_GoalIDIsNotNull_ReturnsList(){
-
         var repo = new Mock<CourseServices.ICourseRepository>();
-
-
-         CourseServices courseSer = new CourseServices(repo);
-
 
         List<Course> courses = new List<Course>();
         List<CoreGoal> coreGoals = new List<CoreGoal>();
         List<CourseOffering> courseOfferings = new List<CourseOffering>();
 
-        
         Course tc = new Course() {
             Name="TEST 101",
             Title="test class",
@@ -54,10 +48,21 @@ public class CourseTest
 
         };
         courseOfferings.Add(tco);
+
         
-        //CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
+
+        CourseServices courseSer = new CourseServices(repo);
 
         repo.Setup(m=>m.getOfferingsByGoalIdAndSemester("TG1", "Spring 2021").Returns(courseOfferings));
+
+        
+
+
+        
+        
+        CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
+
+        
 
         
         
