@@ -1,5 +1,6 @@
 using cs330_proj1;
 using Moq;
+
 namespace CourseProject.Test{
 
 public class CourseTest
@@ -18,8 +19,8 @@ public class CourseTest
 
     [Fact]
     public void OfferingsByGoalAndSemester_GoalIDIsNotNull_ReturnsList(){
-        var repo = new Mock<CourseServices.ICourseRepository>();
-
+        var repo = new Mock<ICourseRepository>();
+        
         List<Course> courses = new List<Course>();
         List<CoreGoal> coreGoals = new List<CoreGoal>();
         List<CourseOffering> courseOfferings = new List<CourseOffering>();
@@ -32,6 +33,7 @@ public class CourseTest
 
         };
         courses.Add(tc);
+        repo.Setup(m=>m.GetCourses()).Returns(courses);
 
         CoreGoal tg = new CoreGoal() {
             Id="TG1",
@@ -40,6 +42,7 @@ public class CourseTest
             Courses = new List<Course>() {tc}
         };
         coreGoals.Add(tg);
+        repo.Setup(m=>m.GetCoreGoals()).Returns(coreGoals);
 
         CourseOffering tco = new CourseOffering() {
             TheCourse=tc,
@@ -48,24 +51,16 @@ public class CourseTest
 
         };
         courseOfferings.Add(tco);
-
+        repo.Setup(m=>m.GetCourseOfferings()).Returns(courseOfferings);
         
 
-        CourseServices courseSer = new CourseServices(repo);
+        CourseServices courseSer = new CourseServices(repo.Object);
 
-        repo.Setup(m=>m.getOfferingsByGoalIdAndSemester("TG1", "Spring 2021").Returns(courseOfferings));
-
-        
-
+        courseSer.getOfferingsByGoalIdAndSemester("TG1", "Spring 2021");
 
         
-        
-        CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);
-
-        
-
-        
-        
+        Assert.Equal();
+        //CourseRepository _repo = new CourseRepository(courses, coreGoals, courseOfferings);  
     }    
 }
 }

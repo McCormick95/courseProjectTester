@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace cs330_proj1
 {
-    public class CourseRepository : CourseServices.ICourseRepository
+    public class CourseRepository : ICourseRepository
     {
         public List<Course> Courses {get;set;}
         public List<CoreGoal> Goals {get;set;}

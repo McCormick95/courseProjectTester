@@ -115,10 +115,11 @@ namespace cs330_proj1
            for a given semester, so that I can work with departments to get some courses offered
            that students can take to meet those goals */
 
-         public interface ICourseRepository{
+         
+     }
+     public interface ICourseRepository{
             public List<Course> GetCourses();
             public List<CoreGoal> GetCoreGoals();
             public List<CourseOffering> GetCourseOfferings();
-         }
-     }
+      }
 }
