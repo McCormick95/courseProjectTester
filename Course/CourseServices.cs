@@ -84,23 +84,23 @@ namespace cs330_proj1
         choose major courses to register for */
         public List<CourseOffering> getCourseOfferingsBySemesterAndDept(string semester, string department){
 
-         List<CourseOffering> theOffering = _repo.GetCourseOfferings();
-         List<CourseOffering> courseOfferingsBySemesterAndDept = new List<CourseOffering>();
+            List<CourseOffering> theOffering = _repo.GetCourseOfferings();
+            List<CourseOffering> courseOfferingsBySemesterAndDept = new List<CourseOffering>();
 
-         if(semester==null) throw new Exception("Didn't select a semester");
-         if(department==null) throw new Exception("Didn't select a department");
-         
-         foreach(CourseOffering co in theOffering){
+            if(semester==null) throw new Exception("Didn't select a semester");
+            if(department==null) throw new Exception("Didn't select a department");
 
-         }
+            foreach(CourseOffering co in theOffering){
 
-         foreach(CourseOffering co in theOffering){
-            if(co.Semester.Equals(semester) && co.TheCourse.Name.Substring(0,4).Equals(department)){
-               courseOfferingsBySemesterAndDept.Add(co);
-            }       
-         }
+            }
 
-         return courseOfferingsBySemesterAndDept;
+            foreach(CourseOffering co in theOffering){
+               if(co.Semester.Equals(semester) && co.TheCourse.Name.Substring(0,4).Equals(department)){
+                  courseOfferingsBySemesterAndDept.Add(co);
+               }       
+            }
+
+            return courseOfferingsBySemesterAndDept;
         } 
 
 
